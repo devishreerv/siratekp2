@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Image in Right Frame</title>
+    <style>
+        /* Ensure body takes full height and no margin */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Right-side container for the image */
+        .rightdiv {
+            width: 100%; /* Take up the entire width of the frame */
+            height: 100%; /* Take up the entire height of the frame */
+            background-color: white; /* Set a white background */
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+
+        /* Image styling */
+        .car-image {
+            width: 80%; /* Set the image width to 80% of the container */
+            height: auto; /* Maintain the aspect ratio */
+            max-width: 450px; /* Set a max-width to avoid stretching */
+        }
+    </style>
+</head>
+<body>
+    <div class="rightdiv">
+        <!-- Car Image -->
+        <img class="car-image" src="./Sealion6_AWD and Superior- Harbour Grey.png" alt="Car Image">
+    </div>
+</body>
+</html>
