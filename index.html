@@ -12,7 +12,7 @@
             margin: 0;
         }
 
-        /* Right-side container for the images */
+        /* Right-side container for the image */
         .rightdiv {
             width: 100%; /* Take up the entire width of the frame */
             height: 100%; /* Take up the entire height of the frame */
@@ -20,53 +20,20 @@
             display: flex;
             justify-content: center; /* Center the content horizontally */
             align-items: center; /* Center the content vertically */
-            overflow: hidden; /* Hide images that go outside the container */
         }
 
-        /* Container for all images (slideable) */
-        .image-container {
-            display: flex; /* Arrange images in a row */
-            transition: transform 1s ease-in-out; /* Smooth sliding transition */
-        }
-
-        /* Individual image styling */
+        /* Image styling */
         .car-image {
-            width: 100%; /* Set each image to take 100% of the container width */
-            height: 100%; /* Ensure image takes full height */
-            object-fit: cover; /* Ensure the image covers the container area without stretching */
-            flex-shrink: 0; /* Prevent images from shrinking */
+            width: 80%; /* Set the image width to 80% of the container */
+            height: auto; /* Maintain the aspect ratio */
+            max-width: 450px; /* Set a max-width to avoid stretching */
         }
     </style>
 </head>
 <body>
     <div class="rightdiv">
-        <!-- Image Container for Slideshow -->
-        <div class="image-container">
-            <img class="car-image" src="./Sealion6_AWD and Superior- Harbour Grey.png" alt="Car Image 1">
-            <img class="car-image" src="./Seal_Comfort - Shark Grey.png" alt="Car Image 2">
-            <img class="car-image" src="./M6_Standard and Extended - Cosmos Black.jpg" alt="Car Image 3">
-            <!-- Add more images as needed -->
-        </div>
+        <!-- Car Image -->
+        <img class="car-image" src="./Sealion6_AWD and Superior- Harbour Grey.png" alt="Car Image">
     </div>
-
-    <script>
-        const imageContainer = document.querySelector('.image-container');
-        const images = document.querySelectorAll('.car-image');
-        let currentIndex = 0;
-
-        // Function to move to the next image
-        function slideImages() {
-            // Move the image container to the left by one image width
-            currentIndex = (currentIndex + 1) % images.length; // Wrap around to first image
-            const offset = -currentIndex * 100; // Calculate offset for the next image
-            imageContainer.style.transform = `translateX(${offset}%)`;
-        }
-
-        // Set interval to slide every 3 seconds
-        setInterval(slideImages, 3000);
-
-        // Initialize the first image
-        slideImages();
-    </script>
 </body>
 </html>
